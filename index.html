@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптація ширини сторінки під телефон-->
+    <title>My Furniture Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a class="header__logo" href="#">
+            <img class="header__logo-img" src="images/Header_logo.webp" alt="SOFA">
+        </a>
+
+        <nav class="header__nav">
+            <a class="header__link" href="#">Promotions</a>
+            <a class="header__link" href="#">Best-selling</a>
+            <a class="header__link" href="#">2026 Collection</a>
+            <a class="header__link" href="#">Testimonials</a>
+            <a class="header__link" href="#">Blog</a>
+            <a class="header__link" href="#">Contact Us</a>
+        </nav>
+
+        <button class="header__button">SHOP NOW</button>
+
+        <button class="header__burger" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- 3 span для бургер меню-->
+        </button>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu__top">
+                <img class="mobile-menu__logo" src="images/Header_logo.webp" alt="SOFA">
+
+            </div>
+
+            <nav class="mobile-menu__nav">
+                <a class="mobile-menu__link" href="#">Promotions</a>
+                <a class="mobile-menu__link" href="#">Best-selling</a>
+                <a class="mobile-menu__link" href="#">2026 Collection</a>
+                <a class="mobile-menu__link" href="#">Testimonials</a>
+                <a class="mobile-menu__link" href="#">Blog</a>
+                <a class="mobile-menu__link" href="#">Contact Us</a>
+            </nav>
+
+            <button class="mobile-menu__button">SHOP NOW</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h2 class="hero__title">
+                    <span class="hero__accent">Furniture</span> for <br>
+                    Home & Office
+                </h2>
+                <!-- span - контейнер для стилізації тексту <br> - примусовий перенос рядка-->
+
+                <p class="hero__text">
+                    500+ models of cushioned furniture, lamps and accessories.
+                </p>
+
+                <button class="hero__button">BEST-SELLING PRODUCTS
+                    <span class="hero__button-arrow">⟶</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

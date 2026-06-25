@@ -1,0 +1,358 @@
+/* 
+селектор
+{
+властивість: значення;
+}
+*/
+
+/* універсальний селектор, вибирає всі елементи на сторінці */
+*,
+
+/* Reset browser layout */
+*::before,
+*::after {
+    margin: 0;
+    /* зовнішні відступи */
+    padding: 0;
+    /* внутрішні відступи */
+
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+    --color-text-main: #333333;
+    --color-primary: #7bb57c;
+    --color-text-secondary: #6e6e6e;
+    --color-white: white;
+}
+
+/* Global CSS */
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: var(--color-text-main);
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    /* елементи стають в один ряд */
+
+    /* justify-content: space-between; */
+    /* розтягує контент горизонтально на максимум вліво і вправо (щоб не були зліплені до купи) */
+
+    align-items: center;
+    /* розміщує контент вертикально по центру*/
+
+    max-width: 1200px;
+    /* обмежує ширину контенту */
+
+    margin: 0 auto;
+    /* центрує блок контенту по горизонталі */
+
+    padding: 25px 20px;
+    /* дає внутрішні відступи: 35px зверху/знизу, 20px зліва/справа */
+}
+
+.header__nav {
+    display: flex;
+    gap: 15px;
+    /* відстань між елементами всередині flex */
+    margin-right: 20px;
+    /* задає відстань між меню і кнопкою. */
+}
+
+.header__link {
+    color: var(--color-text-main);
+    /* колір тексту */
+    text-decoration: none;
+    /* прибирає підкреслення з навігаційного меню */
+    font-size: 15px;
+    font-weight: 500;
+    /*жирність шрифту */
+    transition: color 0.0s ease;
+    /* плавність переходу при наведенні курсором */
+}
+
+/* hover - застосовує стилі, коли курсор мишки наведений на елемент */
+.header__link:hover {
+    color: var(--color-primary);
+}
+
+.header__logo {
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: auto;
+    /* штовхає меню і кнопку вправо. (від логотипа) */
+    transform: translate(-5px, 4px);
+}
+
+.header__logo-img {
+    width: 108px;
+    height: auto;
+}
+
+.header__button {
+    padding: 12px 20px;
+    /* внутршній відступ у кнопці, величина кнопки */
+
+    background-color: var(--color-white);
+    color: var(--color-text-secondary);
+
+    border: 2px solid var(--color-primary);
+    /* рамка навколо кнопки */
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 10px;
+
+    cursor: pointer;
+    /* з'являється курсор при наведенні */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header__button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.header__burger {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 820px;
+    display: flex;
+    align-items: center;
+    /* розміщує контент вертикально по центру */
+
+    background-image: url("../images/Hero_background.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* Заповнити ВСЮ секцію картинкою */
+}
+
+.hero__content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5px;
+    /* зсуває контент блоку вправо */
+
+    transform: translate(10px, 30px);
+    /* зсуває контент блоку вниз на 30px */
+
+}
+
+.hero__title {
+    font-size: 84px;
+    line-height: 1.1;
+    /* інтервал між рядками тексту */
+
+    font-weight: 700;
+    margin-bottom: 40px;
+    /* Відступ між заголовком і текстом. Відступ робиться знизу тексту */
+}
+
+.hero__accent {
+    color: var(--color-primary);
+}
+
+.hero__text {
+    font-size: 18px;
+    margin-bottom: 54px;
+    /* Відступ між текстом і кнопкою. Відступ робиться знизу тексту */
+}
+
+.hero__button {
+    padding: 20px 40px;
+    /* внутршній відступ у кнопці, величина кнопки */
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    /* колір тексту у кнопці */
+
+    border: none;
+    border-radius: 5px;
+    /* заокруглення кнопки */
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    /* тінь від кнопки (зсув по X, зсув по Y, розмиття тіні, колір тіні і прозорість*/
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero__button:hover {
+    background-color: var(--color-text-main);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+
+}
+
+.hero__button-arrow {
+    margin-left: 4px;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Header Mobile */
+    .header {
+        padding: 22px 32px;
+        /* внутрішній відступ: зверху/знизу, зліва/справа */
+    }
+
+    .header__nav,
+    .header__button {
+        display: none;
+    }
+
+    .header__burger {
+        display: flex;
+        flex-direction: column;
+        /* елементи йдуть вертикально */
+        gap: 5px;
+        /* відстань між лініями */
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        z-index: 101;
+    }
+
+    /* Малює лінії бургер меню */
+    .header__burger span {
+        width: 24px;
+        height: 2px;
+        background-color: var(--color-text-main);
+        /* кожен span = маленький прямокутник: ширина 24px, висота 2px, чорний фон. */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .header__burger.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .header__burger.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .header__burger.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        /* робить меню вікном поверх усього екрана */
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 30px 20px;
+        background-color: var(--color-white);
+    }
+
+    .mobile-menu__top {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mobile-menu__logo {
+        width: 108px;
+        height: auto;
+        margin-left: 7px;
+        padding-top: 3px;
+    }
+
+    .mobile-menu__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        margin-top: 35px;
+    }
+
+    .mobile-menu__link {
+        color: var(--color-text-main);
+        text-decoration: none;
+
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.0s ease;
+    }
+
+    .mobile-menu__link:hover {
+        color: var(--color-primary);
+    }
+
+    .mobile-menu__button {
+        margin-top: 28px;
+        padding: 12px 20px;
+
+        background-color: white;
+        color: var(--color-text-secondary);
+        border: 2px solid #7bb77e;
+        border-radius: 5px;
+
+        font-family: inherit;
+        font-size: 11px;
+        font-weight: 700;
+
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mobile-menu__button:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+
+    .mobile-menu.is-open {
+        display: flex;
+    }
+
+    /* Hero Mobile */
+    .hero {
+        min-height: 650px;
+        background-position: center bottom;
+        background-size: cover;
+    }
+
+    .hero__content {
+        padding: 0px 25px;
+        transform: translateY(0px);
+    }
+
+    .hero__title {
+        font-size: 56px;
+    }
+
+}
