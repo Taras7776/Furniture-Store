@@ -215,6 +215,7 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
 
     /* Header Mobile */
@@ -247,9 +248,9 @@ body {
         height: 2px;
         background-color: var(--color-text-main);
         /* кожен span = маленький прямокутник: ширина 24px, висота 2px, чорний фон. */
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        transition: transform 0.3s ease;
     }
-    
+
     .header__burger.is-open span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
