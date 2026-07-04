@@ -414,12 +414,7 @@ body {
     }
 
     .category-card {
-        width: 100%;
-    }
-
-    .category-card__inner {
         width: 98%;
-        margin: 0 auto;
     }
 
     .category-card__image {
