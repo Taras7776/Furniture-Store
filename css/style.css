@@ -264,6 +264,8 @@ body {
 /* Top Collections */
 
 .top-collections {
+    max-width: 1880px;
+    margin: 0 auto;
     padding: 150px 20px;
     background-image: url("../images/top-collections_background.png");
 }
@@ -442,6 +444,8 @@ body {
 
     /* Top-collections mobile */
     .top-collections {
+        max-width: 378px;
+        margin: 0 auto;
         padding: 100px 20px;
         background-image: url("../images/top-collections_background.png");
     }
