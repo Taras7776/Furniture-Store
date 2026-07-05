@@ -305,8 +305,6 @@ body {
     margin: 0 auto;
 }
 
-.best-card {}
-
 .best-card__image {
     max-height: 360px;
 }
