@@ -280,6 +280,12 @@ body {
     color: var(--color-primary);
 }
 
+.best-selling {
+    padding: 120px 20px;
+}
+
+
+
 @media (max-width: 768px) {
 
     /* Header Mobile */
