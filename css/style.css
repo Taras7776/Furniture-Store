@@ -343,7 +343,7 @@ body {
 }
 
 .best-card__button {
-    padding: 14px 22px;
+    padding: 14px 24px;
 
     color: var(--color-white);
     background-color: var(--color-primary);
@@ -539,5 +539,33 @@ body {
         font-size: 58px;
         text-align: center;
         line-height: 1.1;
+    }
+
+    /* Best-selling products */
+    .best-selling__title {
+        font-size: 30px;
+    }
+
+    .best-selling__text {
+        margin-bottom: 45px;
+    }
+
+    .best-selling__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .best-card__image {
+        margin-bottom: 10px;
+    }
+
+    .best-card__link {
+        font-size: 18px;
+    }
+
+    .best-card__price {
+        font-size: 18px;
     }
 }
