@@ -142,7 +142,7 @@ body {
 
     background-image: url("../images/Hero_background.webp");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     /* Заповнити ВСЮ секцію картинкою */
 }
@@ -622,5 +622,19 @@ body {
 
     .best-card__price {
         font-size: 18px;
+    }
+
+    /* Spring collection */
+
+    .spring-collection {
+        padding: 100px 20px;
+    }
+
+    .spring-collection__content {
+        padding-left: 5px;
+    }
+
+    .spring-collection__title {
+        font-size: 58px;
     }
 }
