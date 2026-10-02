@@ -27,6 +27,7 @@
     --color-text-secondary: #6e6e6e;
     --color-text-third: #9a9a9a;
     --color-white: white;
+    --color-border: #edf0f5;
 }
 
 /* Global CSS */
@@ -363,6 +364,124 @@ body {
 .best-card__button:hover {
     background-color: var(--color-text-main);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Product page */
+
+.product {
+    padding: 100px 20px;
+}
+
+.product__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.product__image {
+    width: 100%;
+    display: block;
+}
+
+.product__info {
+    padding-top: 10px; /* відступ зверху для grid-block інфи */  
+}
+
+.product__status {
+    font-size: 16px;
+    color: var(--color-primary);
+}
+
+.product__title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.product__code {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.5px;
+
+    margin-bottom: 20px;
+}
+
+.product__price {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.product__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    border-top: 1px solid var(--color-border);
+    padding-top: 24px;
+}
+
+.product__quantity {
+    width: 70px;
+    height: 48px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.product__button {
+    padding: 18px 28px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 11px;
+
+    color: var(--color-white);
+    background-color: var(--color-primary);
+
+    border: none;
+    border-radius: 5px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product__button:hover {
+    background-color: var(--color-text-main);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.product__description {
+
+}
+
+.product__description-title {
+    font-size: 14px;
+    text-transform: uppercase; /* переводить текст в капс */
+    margin-bottom: 16px;
+
+    cursor: pointer;
+}
+
+.product__description-text {
+    color: var(--color-text-secondary);
+    border-top: 1px solid var(--color-border);
+    padding-top: 24px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    
+    margin-bottom: 20px;
+}
+
+.product__dimensions,
+.product__material,
+.product__details-text {
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
 }
 
 /* Spring Collection */
@@ -719,6 +838,17 @@ body {
 
     .best-card__price {
         font-size: 18px;
+    }
+
+    /* Product page mobile*/
+
+    .product {
+        padding: 40px 20px;
+    }
+
+    .product__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     /* Spring collection */
