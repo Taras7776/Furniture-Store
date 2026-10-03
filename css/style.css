@@ -28,6 +28,7 @@
     --color-text-third: #9a9a9a;
     --color-white: white;
     --color-border: #edf0f5;
+    --color-border2: #c5cbd6;
 }
 
 /* Global CSS */
@@ -373,17 +374,24 @@ body {
 }
 
 .product__content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 360px 1fr;
+    gap: 140px;
     align-items: start;
 }
 
 .product__image {
-    width: 100%;
+    width: 360px;
+    margin-top: 10px;
+}
+
+.product__image img {
     display: block;
+    width: 360px;
+    height: auto;
 }
 
 .product__info {
@@ -398,7 +406,7 @@ body {
 .product__title {
     font-size: 22px;
     font-weight: 500;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .product__code {
@@ -406,7 +414,7 @@ body {
     color: var(--color-text-secondary);
     letter-spacing: 0.5px;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .product__price {
@@ -418,16 +426,24 @@ body {
 .product__actions {
     display: flex;
     align-items: center;
+
     gap: 16px;
-    margin-bottom: 40px;
     border-top: 1px solid var(--color-border);
     padding-top: 24px;
+
+    margin-bottom: 40px;
 }
 
 .product__quantity {
     width: 70px;
     height: 48px;
     padding: 0 10px;
+
+    border: 1px solid var(--color-border2);
+    border-radius: 3px;
+
+    
+
     font-size: 14px;
 }
 
@@ -454,16 +470,31 @@ body {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
 }
 
-.product__description {
-
-}
-
 .product__description-title {
-    font-size: 14px;
+    position: relative; /* Якщо всередині мене буде елемент з position: absolute, позиціонуй його відносно мене */
+    width: fit-content;
+    padding-bottom: 12px;
+    margin-bottom: 0;
+
+    font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase; /* переводить текст в капс */
-    margin-bottom: 16px;
+    text-indent: 10px;
 
     cursor: pointer;
+}
+
+.product__description-title::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100px;
+    height: 2px;
+
+    background-color: var(--color-primary);
 }
 
 .product__description-text {
@@ -849,6 +880,14 @@ body {
     .product__content {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .product__image {
+        width: 100%;
+    }
+
+    .product__image img {
+        width: 100%;
     }
 
     /* Spring collection */
