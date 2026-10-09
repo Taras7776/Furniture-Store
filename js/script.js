@@ -12,6 +12,7 @@ burgerButton.addEventListener("click", () => {
     document.body.classList.toggle("no-scroll");
 });
 
+
 // Best-selling products
 
 const products = [ // масив обєктів для товарів
@@ -199,3 +200,25 @@ if (productsContainer) { // if зчитує якщо цей контейнер �
         );
     });
 }
+
+const faqItems = document.querySelectorAll(".FAQ__item");
+
+faqItems.forEach((item) => {
+    const question = item.querySelector(".FAQ__question");
+
+    question.addEventListener("click", () => {
+        const isOpen = item.classList.contains("is-open");
+
+        faqItems.forEach((faqItem) => {
+            faqItem.classList.remove("is-open");
+
+            const faqQuestion = faqItem.querySelector(".FAQ__question");
+            faqQuestion.setAttribute("aria-expanded", "false");
+        });
+
+        if (!isOpen) {
+            item.classList.add("is-open");
+            question.setAttribute("aria-expanded", "true");
+        }
+    });
+});
