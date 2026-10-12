@@ -201,22 +201,26 @@ if (productsContainer) { // if зчитує якщо цей контейнер �
     });
 }
 
+
+
+// FAQ button animation
+
 const faqItems = document.querySelectorAll(".FAQ__item");
 
-faqItems.forEach((item) => {
-    const question = item.querySelector(".FAQ__question");
+faqItems.forEach((item) => { // додаєм обробник кліку кожній вкладці
+    const question = item.querySelector(".FAQ__question"); // знаходить кнопку всередині поточної вкладки
 
-    question.addEventListener("click", () => {
+    question.addEventListener("click", () => { // перевіряє, чи вкладка вже відкрита
         const isOpen = item.classList.contains("is-open");
 
-        faqItems.forEach((faqItem) => {
+        faqItems.forEach((faqItem) => { // закриваєм всі вкладки та оновлюємо їх стан
             faqItem.classList.remove("is-open");
 
             const faqQuestion = faqItem.querySelector(".FAQ__question");
             faqQuestion.setAttribute("aria-expanded", "false");
         });
 
-        if (!isOpen) {
+        if (!isOpen) { // якщо вкладка була закрита, тоді відкриваємо її
             item.classList.add("is-open");
             question.setAttribute("aria-expanded", "true");
         }
