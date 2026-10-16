@@ -1,15 +1,26 @@
 // Mobile menu
 
+// Mobile menu
+
 const burgerButton = document.querySelector(".header__burger");
 const mobileMenu = document.querySelector(".mobile-menu");
 
 burgerButton.addEventListener("click", () => {
     burgerButton.classList.toggle("is-open");
     // toggle - метод для перемикання станів, якщо CSS-клас існує на елементі — метод видаляє його; якщо відсутній — додає
-
     mobileMenu.classList.toggle("is-open");
-
     document.body.classList.toggle("no-scroll");
+});
+
+// закриває mobile menu після кліку navigation link
+const mobileLinks = mobileMenu.querySelectorAll("a");
+
+mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        burgerButton.classList.remove("is-open");
+        mobileMenu.classList.remove("is-open");
+        document.body.classList.remove("no-scroll");
+    });
 });
 
 
@@ -161,9 +172,11 @@ if (productContent) {
 
 // Best-selling products rendering
 
+// Best-selling products rendering
+
 const productsContainer = document.querySelector(".best-selling__content");
 
-if (productsContainer) { // if зчитує якщо цей контейнер існує на цій сторінці — генеруй картки. Якщо немає — нічого
+if (productsContainer) {
     products.forEach((product) => {
         productsContainer.insertAdjacentHTML(
             "beforeend",
@@ -174,11 +187,11 @@ if (productsContainer) { // if зчитує якщо цей контейнер �
                     class="best-card__image-link"
                     href="product.html?id=${product.id}"
                 >
-                <img
-                    class="best-card__image"
-                    src="${product.image}"
-                    alt="${product.name}"
-                >
+                    <img
+                        class="best-card__image"
+                        src="${product.image}"
+                        alt="${product.name}"
+                    >
                 </a>
 
                 <a class="best-card__link" href="product.html?id=${product.id}">
@@ -189,12 +202,13 @@ if (productsContainer) { // if зчитує якщо цей контейнер �
                     ${product.price.toFixed(2)} USD
                 </p>
 
-                <button
+                <a
                     class="best-card__button"
-                    data-product-id="${product.id}"
+                    href="product.html?id=${product.id}"
                 >
                     ORDER NOW
-                </button>
+                </a>
+
             </article>
             `
         );

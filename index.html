@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптація ширини сторінки під телефон-->
 
     <link rel="icon" href="images/icon.png">
-    
+
     <title>Furniture Store</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +19,21 @@
 </head>
 
 <body>
-    <header class="header">
-        <a class="header__logo" href="#">
+    <header class="header" id="top">
+        <a class="header__logo" href="#top">
             <img class="header__logo-img" src="images/Header_logo.webp" alt="SOFA">
         </a>
 
         <nav class="header__nav">
             <a class="header__link" href="#promotions">Promotions</a>
-            <a class="header__link" href="#">Best-selling</a>
+            <a class="header__link" href="#best-selling">Best-selling</a>
             <a class="header__link" href="#">2026 Collection</a>
             <a class="header__link" href="#">Testimonials</a>
-            <a class="header__link" href="#">Blog</a>
-            <a class="header__link" href="#">Contact Us</a>
+            <a class="header__link" href="#FAQ">FAQ</a>
+            <a class="header__link" href="#footer">Contact Us</a>
         </nav>
 
-        <button class="header__button">SHOP NOW</button>
+        <a class="header__button" href="#best-selling">SHOP NOW</a>
 
         <button class="header__burger" aria-label="Open Menu">
             <span></span>
@@ -49,12 +49,12 @@
             </div>
 
             <nav class="mobile-menu__nav">
-                <a class="mobile-menu__link" href="#">Promotions</a>
-                <a class="mobile-menu__link" href="#">Best-selling</a>
+                <a class="mobile-menu__link" href="#promotions">Promotions</a>
+                <a class="mobile-menu__link" href="#best-selling">Best-selling</a>
                 <a class="mobile-menu__link" href="#">2026 Collection</a>
                 <a class="mobile-menu__link" href="#">Testimonials</a>
-                <a class="mobile-menu__link" href="#">Blog</a>
-                <a class="mobile-menu__link" href="#">Contact Us</a>
+                <a class="mobile-menu__link" href="#FAQ">FAQ</a>
+                <a class="mobile-menu__link" href="#footer">Contact Us</a>
             </nav>
 
             <button class="mobile-menu__button">SHOP NOW</button>
@@ -74,9 +74,9 @@
                     500+ models of cushioned furniture, lamps and accessories.
                 </p>
 
-                <button class="hero__button">BEST-SELLING PRODUCTS
+                <a class="hero__button" href="#best-selling">BEST-SELLING PRODUCTS
                     <span class="hero__button-arrow">⟶</span>
-                </button>
+                </a>
             </div>
         </section>
 
@@ -121,7 +121,7 @@
             </h3>
         </section>
 
-        <section class="best-selling">
+        <section class="best-selling" id="best-selling">
             <h2 class="best-selling__title">Best-selling Products</h2>
             <p class="best-selling__text">Our customers' faves of the week</p>
             <div class="best-selling__content">
@@ -139,7 +139,7 @@
                     2020.<br>
                     Shop cushioned furniture, lamps, coffee tables and accessories here.
                 </p>
-                <button class="spring-collection__button">OUR FAVES ⟶</button>
+                <a class="spring-collection__button" href="#best-selling">OUR FAVES ⟶</a>
             </div>
         </section>
 
@@ -156,9 +156,9 @@
                         Set bright accents in your interior.<br>
                         Shop the collections of selected designers.
                     </p>
-                    <button class="promo-card__button">
+                    <a class="promo-card__button" href="#best-selling">
                         LEARN MORE ⟶
-                    </button>
+                    </a>
                 </article>
 
                 <article class="promo-card promo-card--dark">
@@ -173,14 +173,14 @@
                         Top models of furniture & lamps.<br>
                         Find your inspiration in our B&W collections.
                     </p>
-                    <button class="promo-card__button">
+                    <a class="promo-card__button" href="#best-selling">
                         LEARN MORE ⟶
-                    </button>
+                    </a>
                 </article>
             </div>
         </section>
 
-        <section class="FAQ">
+        <section class="FAQ" id="FAQ">
             <div class="FAQ__content">
                 <article class="FAQ__info">
                     <h2 class="FAQ__title">
@@ -240,11 +240,11 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer__content">
 
             <div class="footer__about">
-                <a class="footer__logo" href="#">
+                <a class="footer__logo" href="#top">
                     <img class="header__logo-img" src="images/Footer_logo.webp" alt="SOFA">
                 </a>
 
@@ -255,30 +255,33 @@
             </div>
 
             <nav class="footer__nav">
-                <a class="footer__link" href="#">Promotions</a>
+                <a class="footer__link" href="#promotions">Promotions</a>
                 <a class="footer__link" href="#">2026 Collection</a>
-                <a class="footer__link" href="#">Blog</a>
+                <a class="footer__link" href="#FAQ">FAQ</a>
             </nav>
 
             <nav class="footer__nav">
-                <a class="footer__link" href="#">Best-selling</a>
+                <a class="footer__link" href="#best-selling">Best-selling</a>
                 <a class="footer__link" href="#">Testimonials</a>
-                <a class="footer__link" href="#">Contact Us</a>
+                <a class="footer__link" href="#footer">Contact Us</a>
             </nav>
 
             <div class="footer__social">
                 <p class="footer__title">Follow Us</p>
 
                  <div class="footer__social-links">
-                        <a class="footer__social-link" href="https://www.facebook.com/" aria-label="Facebook">
+                        <a class="footer__social-link" href="https://www.facebook.com/" 
+                        target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
 
-                        <a class="footer__social-link" href="https://www.instagram.com/" aria-label="Instagram">
+                        <a class="footer__social-link" href="https://www.instagram.com/" 
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         
-                        <a class="footer__social-link" href="https://www.youtube.com/" aria-label="YouTube">
+                        <a class="footer__social-link" href="https://www.youtube.com/" 
+                        target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
 
